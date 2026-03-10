@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoagentlab"
+version = "0.1.0"
+description = "Automated experimentation for AI agents — agents run tasks, analyze failures, improve themselves, and repeat."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "MeghanBao"},
+]
+keywords = ["ai", "agents", "llm", "prompt-engineering", "self-improvement", "experimentation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "openai>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+autoagentlab = "autoagentlab.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/MeghanBao/AutoAgentLab"
+Repository = "https://github.com/MeghanBao/AutoAgentLab"
+Issues = "https://github.com/MeghanBao/AutoAgentLab/issues"

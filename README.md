@@ -238,11 +238,11 @@ autoagentlab run your_benchmark_name
 
 ## 🌟 Roadmap
 
-- [ ] **Tool Discovery** — agents auto-discover and use tools (calculator, search, Python)
-- [ ] **Workflow Mutation** — evolve multi-step reasoning chains
-- [ ] **Agent Lineage** — track evolution history as a tree
-- [ ] **Multi-objective** — optimize for accuracy + cost + latency
-- [ ] **Population-based** — evolve a population of agents in parallel
+- [x] **Tool Discovery** — agents auto-discover and use tools (calculator, search, Python)
+- [x] **Workflow Mutation** — evolve multi-step reasoning chains
+- [x] **Agent Lineage** — track evolution history as a tree
+- [x] **Multi-objective** — optimize for accuracy + cost + latency
+- [x] **Population-based** — evolve a population of agents in parallel
 
 ---
 

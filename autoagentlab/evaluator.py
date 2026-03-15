@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import time
 from dataclasses import dataclass, field
 
@@ -34,8 +35,65 @@ class EvalResult:
         return self.total_tokens * 0.00000038
 
 
+# ── Answer-checking helpers ─────────────────────────────────────────
+
+# Finds all numbers in a string, including negatives and decimals
+_NUMBER_RE = re.compile(r"-?\d+(?:\.\d+)?(?:e[+-]?\d+)?", re.IGNORECASE)
+
+
+def _parse_number(s: str) -> float:
+    """Parse a single string to float; raises ValueError if not numeric."""
+    cleaned = s.strip().replace(",", "").replace(" ", "")
+    return float(cleaned)
+
+
+def _numbers_close(a: float, b: float, rel_tol: float = 0.01, abs_tol: float = 0.5) -> bool:
+    """Return True if a and b are within 1% relative or 0.5 absolute tolerance."""
+    if b == 0:
+        return abs(a) <= abs_tol
+    return abs(a - b) / abs(b) <= rel_tol or abs(a - b) <= abs_tol
+
+
+def _match_single(response: str, expected: str) -> bool:
+    """Check whether *response* satisfies a single expected-answer string.
+
+    Strategy:
+    - If *expected* is purely numeric: use only numeric tolerance matching
+      (avoids false positives like "8" matching "80" via substring).
+    - Otherwise: use case-insensitive substring matching.
+    """
+    # 1. Numeric tolerance match for numeric expected values.
+    #    Handles "3.14" ≈ "3.14159", "9,716" == "9716", "195.0" == "195", etc.
+    try:
+        exp_num = _parse_number(expected)
+        # Strip commas from response so "9,716" is read as 9716
+        resp_clean = response.replace(",", "")
+        for m in _NUMBER_RE.finditer(resp_clean):
+            try:
+                if _numbers_close(float(m.group()), exp_num):
+                    return True
+            except ValueError:
+                pass
+        # expected IS numeric but nothing in response matched → False
+        return False
+    except ValueError:
+        pass  # expected is not a plain number — fall through to text match
+
+    # 2. Case-insensitive substring match for text answers.
+    return expected.strip().lower() in response.strip().lower()
+
+
 class Evaluator:
-    """Evaluates an agent's accuracy on a list of (question, expected_answer) tasks."""
+    """Evaluates an agent's accuracy on a list of (question, expected_answer) tasks.
+
+    Expected-answer format in benchmark JSON:
+        - Single string:        "Paris"
+        - Pipe-separated alts:  "same|equal|neither"  (any one match counts)
+
+    Answer checking (in order):
+        1. Case-insensitive substring match.
+        2. Numeric tolerance match (1% relative or ±0.5 absolute).
+    """
 
     def evaluate(self, agent, tasks: list[list[str]]) -> EvalResult:
         """Run the agent on every task and compute accuracy.
@@ -81,5 +139,10 @@ class Evaluator:
 
     @staticmethod
     def _check_answer(response: str, expected: str) -> bool:
-        """Check if the expected answer appears in the response (case-insensitive)."""
-        return expected.strip().lower() in response.strip().lower()
+        """Return True if *response* matches *expected*.
+
+        Supports pipe-separated alternatives (any one match counts) and
+        numeric tolerance matching in addition to substring matching.
+        """
+        alternatives = [a.strip() for a in expected.split("|")]
+        return any(_match_single(response, alt) for alt in alternatives)

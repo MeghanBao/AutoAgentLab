@@ -1,0 +1,22 @@
+[
+  ["What does len('Hello, World!') return in Python?", "13"],
+  ["What is the output of: print(2 ** 8)", "256"],
+  ["What does list(range(5)) produce in Python?", "[0, 1, 2, 3, 4]"],
+  ["What is the output of: print(sorted([5, 2, 8, 1, 9, 3]))", "[1, 2, 3, 5, 8, 9]"],
+  ["What does 'hello'.upper() return?", "HELLO"],
+  ["What is the output of: print(sum([1, 2, 3, 4, 5]))", "15"],
+  ["What does int('42') + int('8') return?", "50"],
+  ["What is the result of: [x**2 for x in range(1, 6)]", "[1, 4, 9, 16, 25]"],
+  ["What does 'python'[::-1] return?", "nohtyp"],
+  ["What is the output of: print(', '.join(['a', 'b', 'c']))", "a, b, c"],
+  ["What does max([3, 1, 4, 1, 5, 9, 2, 6]) return?", "9"],
+  ["What does {'a': 1, 'b': 2}.get('c', 0) return?", "0"],
+  ["How many elements does set([1, 2, 2, 3, 3, 3]) contain?", "3"],
+  ["What is the output of: print(round(3.14159, 2))", "3.14"],
+  ["What does '  hello world  '.strip() return?", "hello world"],
+  ["What is the output of: print(3 // 2, 3 % 2)", "1 1"],
+  ["In Python, what does bool([]) return?", "False"],
+  ["What does 'abcde'[1:4] return?", "bcd"],
+  ["How many items does list(range(10, 50, 5)) contain?", "8"],
+  ["What is the output of: print(type(3.14).__name__)", "float"]
+]

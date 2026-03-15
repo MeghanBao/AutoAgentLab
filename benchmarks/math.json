@@ -1,0 +1,22 @@
+[
+  ["What is 347 × 28?", "9716"],
+  ["What is 2 to the power of 16?", "65536"],
+  ["What is the square root of 2025?", "45"],
+  ["What is 15% of 840?", "126"],
+  ["A train travels at 120 km/h for 2.5 hours. How many km does it travel?", "300"],
+  ["What is 23 + 47 × 2? (Use standard order of operations)", "117"],
+  ["A rectangle has length 14 and width 9. What is its perimeter?", "46"],
+  ["What is the greatest common divisor of 48 and 36?", "12"],
+  ["Convert the fraction 3/8 to a decimal.", "0.375"],
+  ["A store has 240 items. 15% are returned. How many items remain?", "204"],
+  ["What is 7 factorial (7!)?", "5040"],
+  ["If x + 15 = 42, what is x?", "27"],
+  ["What is 0.25 × 0.4?", "0.1"],
+  ["A car uses 8 liters per 100 km. How many liters are needed for 350 km?", "28"],
+  ["What is the sum of interior angles of a triangle in degrees?", "180"],
+  ["What is log base 10 of 1000?", "3"],
+  ["If you invest $1000 at 5% annual compound interest for 2 years, what is the total amount? (round to 2 decimal places)", "1102.5"],
+  ["What is the area of a circle with radius 5? Use π ≈ 3.14159 and round to 2 decimal places.", "78.54"],
+  ["A shop sells a jacket for $120. The price is increased by 25%. What is the new price?", "150"],
+  ["What is the LCM (least common multiple) of 4 and 6?", "12"]
+]

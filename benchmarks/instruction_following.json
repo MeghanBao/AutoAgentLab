@@ -1,0 +1,22 @@
+[
+  ["Answer with ONLY a single integer, no words or punctuation: How many hours are in a day?", "24"],
+  ["Answer with ONLY Yes or No: Is the Moon a planet?", "No"],
+  ["Answer with ONLY Yes or No: Is water (H2O) composed of hydrogen and oxygen?", "Yes"],
+  ["Answer with ONLY the chemical symbol, nothing else: What is the symbol for sodium?", "Na"],
+  ["Answer with ONLY a number: How many sides does a hexagon have?", "6"],
+  ["Answer with ONLY the country name: In which country is the Eiffel Tower located?", "France"],
+  ["Answer with ONLY Yes or No: Is 97 a prime number?", "Yes"],
+  ["Answer with ONLY a number: How many degrees are in a right angle?", "90"],
+  ["List ONLY the three primary colors of light, separated by commas, in alphabetical order.", "blue, green, red|blue,green,red"],
+  ["Answer with ONLY the two-letter abbreviation: What is the postal abbreviation for California, USA?", "CA"],
+  ["Answer with ONLY a number: How many zeros are in one million?", "6"],
+  ["Answer with ONLY Yes or No: Does the Earth orbit the Sun?", "Yes"],
+  ["Answer with ONLY the single word that completes this analogy — Dog : Puppy :: Cat : ___", "Kitten"],
+  ["Answer with ONLY a number: What is the atomic number of carbon?", "6"],
+  ["Answer with ONLY the direction: The Sun rises in the ___", "East"],
+  ["Answer with ONLY Yes or No: Is a tomato botanically a fruit?", "Yes"],
+  ["Answer with ONLY a number: How many minutes are in a full day?", "1440"],
+  ["Answer with ONLY the element name: What element has the symbol Fe?", "Iron"],
+  ["Answer with ONLY Yes or No: Is Python an interpreted programming language?", "Yes"],
+  ["Answer with ONLY a number: How many sides does an octagon have?", "8"]
+]

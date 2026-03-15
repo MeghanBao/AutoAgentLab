@@ -1,0 +1,22 @@
+[
+  ["All mammals are warm-blooded. Dolphins are mammals. Are dolphins warm-blooded? Answer Yes or No.", "Yes"],
+  ["A is taller than B. B is taller than C. Is A taller than C? Answer Yes or No.", "Yes"],
+  ["Which is heavier: 1 kilogram of steel or 1 kilogram of feathers?", "same|equal|neither|both weigh|they weigh the same"],
+  ["Complete the number sequence: 2, 4, 8, 16, ___", "32"],
+  ["Complete the Fibonacci sequence: 1, 1, 2, 3, 5, 8, ___", "13"],
+  ["Complete the pattern: 1, 4, 9, 16, 25, ___", "36"],
+  ["If today is Monday, what day of the week is it in 9 days?", "Wednesday"],
+  ["A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost in cents?", "5"],
+  ["You have a 3-litre jug and a 5-litre jug. How can you measure exactly 4 litres? How many steps does the shortest solution take?", "2|two"],
+  ["If you have 3 boxes each containing 3 boxes, and each of those contains 3 boxes, how many boxes are there in total?", "39"],
+  ["A snail climbs 3 metres up a wall during the day and slides back 2 metres at night. The wall is 10 metres tall. On which day does it reach the top?", "8"],
+  ["There are 5 houses in a row. The green house is immediately to the left of the white house. The red house is in the middle. The blue house is first. Where is the yellow house? (Position 1-5)", "5"],
+  ["If APPLE = 50 (A=1, P=16, P=16, L=12, E=5), what is the value of CAT? (C=3, A=1, T=20)", "24"],
+  ["Two trains start 300 km apart and travel toward each other. Train A travels at 80 km/h and Train B at 70 km/h. In how many hours do they meet?", "2"],
+  ["If all Blurps are Snurps, and no Snurps are Flurps, can a Blurp be a Flurp? Answer Yes or No.", "No"],
+  ["A farmer has chickens and cows. There are 20 heads and 56 legs. How many cows are there?", "8"],
+  ["What comes next: O, T, T, F, F, S, S, E, ___", "N"],
+  ["If you fold a piece of paper in half 10 times, how many layers do you get?", "1024"],
+  ["Three friends share a bill of $30. Each pays $10. The waiter returns $5, and each friend takes $1 back, giving the waiter a $2 tip. Each friend effectively paid $9, totaling $27. The tip is $2. Where is the missing dollar?", "there is no missing dollar|no missing dollar|the premise is flawed|false premise"],
+  ["A clock shows 3:15. What is the angle between the hour hand and the minute hand in degrees?", "7.5"]
+]
